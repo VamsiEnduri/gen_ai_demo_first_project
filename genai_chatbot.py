@@ -6,7 +6,7 @@ st.title("Gen-AI chatbot application")
 question___=st.text_input("enter yr question",placeholder="enter yr question here to get the naswer")
 pdf=st.file_uploader("upload pdf file ",type=["pdf"])
 
-g_client=Groq(api_key="") # groq client
+g_client=Groq(api_key=st.secrets["s"]) # groq client
 
 if st.button("Generate"):
     st.write(question___)
